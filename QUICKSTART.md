@@ -5,7 +5,7 @@ Get Say No To Gemini running in 2 minutes.
 ## Step 1: Generate Icons
 
 ```bash
-cd no-gemini-extension
+cd say-no-to-gemini
 npm install sharp
 node scripts/generate-icons.js
 ```
@@ -23,7 +23,7 @@ See [ICONS.md](ICONS.md) for options.
 1. Open `chrome://extensions/`
 2. Toggle **Developer mode** (top-right)
 3. Click **Load unpacked**
-4. Select the `no-gemini-extension` folder
+4. Select the `say-no-to-gemini` folder
 5. Done!
 
 ## Step 3: Test It

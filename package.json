@@ -1,12 +1,12 @@
 {
-  "name": "no-gemini",
+  "name": "say-no-to-gemini",
   "version": "1.0.0",
   "description": "Remove AI-generated content from Google Search results",
   "author": "Your Name",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/no-gemini-extension.git"
+    "url": "https://github.com/ahonestla/say-no-to-gemini.git"
   },
   "keywords": [
     "chrome-extension",

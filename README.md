@@ -14,7 +14,7 @@ Automatically appends `-noai` to your Google search queries, excluding Gemini an
 2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in top-right)
 4. Click **Load unpacked**
-5. Select the `no-gemini-extension` folder
+5. Select the `say-no-to-gemini` folder
 6. Done! The extension is now active
 
 ### For End Users (Chrome Web Store)
@@ -45,7 +45,7 @@ Publish to the Chrome Web Store following [Google's guidelines](https://develope
 ## Files
 
 ```
-no-gemini-extension/
+say-no-to-gemini/
 ├── manifest.json          # Extension configuration
 ├── content.js             # Search interception logic
 ├── background.js          # Service worker

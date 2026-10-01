@@ -5,9 +5,9 @@
 set -e
 
 DIST_DIR="dist"
-ZIP_FILE="no-gemini.zip"
+ZIP_FILE="say-no-to-gemini.zip"
 
-echo "Building No Gemini extension package..."
+echo "Building Say No To Gemini extension package..."
 
 # Create dist directory
 mkdir -p "$DIST_DIR"

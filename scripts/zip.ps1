@@ -1,10 +1,10 @@
 # Build script for Chrome/Edge Web Store submission (Windows PowerShell)
 
 $DistDir = "dist"
-$ZipFile = "no-gemini.zip"
+$ZipFile = "say-no-to-gemini.zip"
 $ZipPath = Join-Path $DistDir $ZipFile
 
-Write-Host "Building No Gemini extension package..." -ForegroundColor Green
+Write-Host "Building Say No To Gemini extension package..." -ForegroundColor Green
 
 # Create dist directory if it doesn't exist
 if (-not (Test-Path $DistDir)) {

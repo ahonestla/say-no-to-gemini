@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Say No To Gemini</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Say No To Gemini</h1>
+      <p class="subtitle">Remove AI results from Google Search</p>
+    </div>
+
+    <div class="settings">
+      <label class="toggle-label">
+        <input type="checkbox" id="enabledToggle" class="toggle-checkbox">
+        <span class="toggle-slider"></span>
+        <span class="toggle-text">Extension Enabled</span>
+      </label>
+    </div>
+
+    <div class="info">
+      <p><strong>What it does:</strong> Automatically appends <code>-noai</code> to your Google search queries to
+        exclude AI-generated results.</p>
+      <p><strong>Status:</strong> <span id="status" class="status-enabled">Active</span></p>
+    </div>
+
+    <div class="footer">
+      <p class="version">v1.0.0</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

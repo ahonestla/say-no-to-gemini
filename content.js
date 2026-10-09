@@ -68,15 +68,32 @@ chrome.storage.local.get({ enabled: true }, (data) => {
   if (urlQuery) {
     const newQuery = addNoAiToQuery(urlQuery);
     if (newQuery !== urlQuery) {
+      // Check if we've already processed this query (prevent infinite reload)
+      const alreadyProcessed = sessionStorage.getItem('noai_processed_' + urlQuery);
+      if (alreadyProcessed) {
+        log('Already processed this query, skipping reload');
+        return;
+      }
+
+      // Mark this query as processed
+      sessionStorage.setItem('noai_processed_' + urlQuery, 'true');
+
       params.set('q', newQuery);
       const newUrl = window.location.pathname + '?' + params.toString();
-      window.history.replaceState({}, '', newUrl);
-      log('URL rewrite: appended -noai', urlQuery, '->', newQuery);
+      const originalUrl = window.location.pathname + '?' + new URLSearchParams(window.location.search).toString();
+      
+      log('URL detected: appending -noai and reloading', urlQuery, '->', newQuery);
+      
+      // Reload with -noai parameter
+      window.location.href = window.location.origin + newUrl;
+      return; // Stop further execution
     }
   }
 
+
+
   // ======================
-  // 3. Monitor for AJAX/fetch calls (Google Instant)
+  // 4. Monitor for AJAX/fetch calls (Google Instant)
   // ======================
   const originalFetch = window.fetch;
   window.fetch = function(...args) {
@@ -98,7 +115,7 @@ chrome.storage.local.get({ enabled: true }, (data) => {
   };
 
   // ======================
-  // 4. Monitor input changes (for auto-suggestions)
+  // 5. Monitor input changes (for auto-suggestions)
   // ======================
   document.addEventListener('change', (e) => {
     if (e.target.name === 'q') {

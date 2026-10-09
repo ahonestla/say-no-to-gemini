@@ -13,18 +13,7 @@ The storage permission is used to save your extension toggle state (enabled/disa
 
 ---
 
-## 2. Scripting Permission Justification
-
-**Permission:** `scripting`
-
-**Justification:**
-```
-The scripting permission is used to run a content script on Google Search pages. This script intercepts your search queries and appends the "-noai" parameter before they are sent to Google. This allows the extension to exclude AI-generated results from your searches. All processing happens in your browser—no data is sent to external servers.
-```
-
----
-
-## 3. Host Permissions Justification
+## 2. Host Permissions Justification
 
 **Permission:** `*://www.google.com/*`, `*://www.google.fr/*`, etc. (all Google domains)
 

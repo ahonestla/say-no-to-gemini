@@ -9,8 +9,7 @@
     "128": "icons/128.png"
   },
   "permissions": [
-    "storage",
-    "scripting"
+    "storage"
   ],
   "host_permissions": [
     "*://www.google.com/*",
